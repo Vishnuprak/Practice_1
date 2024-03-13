@@ -9,4 +9,9 @@ head{
 }
 .manage{
 	color:lightblue;
+.color{
+	text-align: center;
+}
+.change{
+	float:right;
 }

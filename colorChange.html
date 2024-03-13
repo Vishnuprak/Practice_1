@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div .back{
+            font-size: 50px;
+            text-align: center;
+            height: 60px;
+            width: 800px;
+            background-color:black ;
+/*            overflow: hidden;*/
+            color: white;
+            flex-wrap: wrap;
+            justify-content:center;
+        }
+        .container{
+            padding-top: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .btn{
+            font-size: 20px;background: red;color: white;
+        }
+    </style>
+</head>
+<body id="box1">
+    <div class="container">
+    <div class="back">Background Color : colors[0]</div><br>
+    <button onclick="change()" class="btn" id="box">change color</button>
+    </div>
+    <script>
+        const box = document.getElementById('box'),
+            colors = [ 'pink', 'blue','yellow','violet'];
+            let   colorIndex  = 0;
+
+        function change(){
+            
+
+            box.addEventListener('click', () => {
+             box1.style.backgroundColor = colors[colorIndex];      
+            colorIndex = (colorIndex + 1) % colors.length
+});
+        }
+    </script>
+    
+</body>
+</html>
